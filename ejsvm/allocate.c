@@ -97,6 +97,13 @@ void allocate_iterator_data(Context *ctx, JSValue a, int size)
   set_jsnormal_iterator_index(a, 0);
 }
 
+AbstractValue *allocate_abstract_value(Context *ctx)
+{
+  AbstractValue *p = (AbstractValue *) gc_malloc(ctx, sizeof(AbstractValue),
+                                                 HTAG_ABSTRACT_VALUE.v);
+  return p;
+}
+
 /* Local Variables:      */
 /* mode: c               */
 /* c-basic-offset: 2     */

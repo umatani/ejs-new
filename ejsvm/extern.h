@@ -56,6 +56,7 @@ extern StringCell *allocate_string(Context *, uint32_t);
 extern void reallocate_array_data(Context *, JSValue, int);
 extern Iterator *allocate_iterator(Context *);
 extern void allocate_iterator_data(Context *, JSValue, int);
+extern AbstractValue *allocate_abstract_value(Context *ctx);
 
 /*
  * builtin.c
@@ -310,6 +311,8 @@ extern void init_inline_cache(InlineCache *ic);
 #ifdef HC_PROF
 extern void hcprof_print_all_hidden_class(void);
 #endif /* HC_PROF */
+
+extern JSValue new_abstract_value(Context *ctx);
 
 /*
  * object-compat.c

@@ -500,6 +500,13 @@ JSValue new_regexp_object(Context *ctx, char *name, char *pat, int flag)
 }
 #endif /* USE_REGEXP */
 
+JSValue new_abstract_value(Context *ctx)
+{
+  AbstractValue *p;
+  p = allocate_abstract_value(ctx);
+  return ptr_to_normal_abstract_value(p);
+}
+
 /* HIDDEN CLASS *******************************************************/
 
 PropertyMap *new_property_map(Context *ctx, char *name,

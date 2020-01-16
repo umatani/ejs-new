@@ -8,5 +8,10 @@
    $dst = imm
  */
 
-  dst = imm;
+  printf("specconst imm = %x\n", imm);
+  if (imm == JS_NULL) {
+    dst = new_abstract_value(context);
+    printf("creating abstract value\n");
+  } else
+    dst = imm;
 \}
