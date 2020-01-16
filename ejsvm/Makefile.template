@@ -6,7 +6,7 @@ EJSVM_DIR = ../ejsvm
 ## configuration files
 ##
 
-DATATYPES = $(EJSVM_DIR)/datatypes/default.def
+DATATYPES = $(EJSVM_DIR)/datatypes/ai.def
 OPERANDSPEC = $(EJSVM_DIR)/operand-spec/any.spec
 # OPERANDSPEC = $(EJSVM_DIR)/operand-spec/fixnum-unspec.spec
 SUPERINSNSPEC = $(EJSVM_DIR)/superinsn-spec/all.si
