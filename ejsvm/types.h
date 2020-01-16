@@ -23,6 +23,7 @@ typedef struct jsobject_cell JSObject;
 typedef struct iterator Iterator;
 typedef struct string_cell StringCell;
 typedef struct flonum_cell FlonumCell;
+typedef struct abstract_value AbstractValue;
 /*
  * no-JS type
  */
@@ -728,6 +729,12 @@ static inline int is_false(JSValue v)
   set_prop_with_attribute(c, o, cstr_to_string((c),(s)), v, attr)
 #define set_obj_cstr_prop_none(c, o, s, v)      \
   set_obj_cstr_prop(c, o, s, v, ATTR_NONE)
+
+/******** Abstract Value **********/
+
+struct abstract_value {
+};
+
 
 /* Local Variables:      */
 /* mode: c               */
