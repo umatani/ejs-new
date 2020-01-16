@@ -59,6 +59,7 @@ public class VMDataType implements GlobalConstantOptions, Comparable<VMDataType>
             defineVMDataType("string_object", true);
             defineVMDataType("number_object", true);
             defineVMDataType("boolean_object", true);
+            defineVMDataType("abstract_value", true);
         }
     }
 
