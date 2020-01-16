@@ -729,6 +729,8 @@ STATIC_INLINE void process_node(uintptr_t ptr)
     abort();
     break;
 #endif /* HC_SKIP_INTERNAL || WEAK_SHAPE_LIST */
+  case CELLT_ABSTRACT_VALUE:
+    return;
   default:
     abort();
   }
