@@ -1,5 +1,15 @@
 \inst add (Register dst, Value v1, Value v2)
 
+\when v1:abstract_value \{
+  printf("add found abstract value in v1\n");
+  dst = v1;
+\}
+
+\when v2:abstract_value \{
+  printf("add found abstract value in v2\n");
+  dst = v2;
+\}
+
 \when v1:fixnum && v2:fixnum \{
   cint s = fixnum_to_cint(v1) + fixnum_to_cint(v2);
   dst = cint_to_number(context, s);
